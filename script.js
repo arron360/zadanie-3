@@ -1,9 +1,9 @@
 let money = +prompt("Ваш бюджет на месяц?","");
 let	data = prompt("Введите дату в формате YYYY-MM-DD", "");
-let appData = {
+let appData = {    //объкт
 	budget: money,
 	timeData: data,
-	expenses: {},
+	expenses: {}, // объект в объекте 
 	optionalExpenses: {},
 	income: [],
 	savings:false
@@ -16,7 +16,7 @@ for (let i = 0; i < 2; i++) {
 
 if ((typeof(a))==='string' && (typeof(a))!=null && (typeof(b))!=null && a !='' && b !='' && a.length < 50 ) {
 		console.log("done");
-		appData.expenses[a] = b;
+		appData.expenses[a] = b; // [a] ключ b значение ,вставляется в основной объект
 	} else {                            
         console.log ("bad result");
 		i--; // возврат к началу цикла 
